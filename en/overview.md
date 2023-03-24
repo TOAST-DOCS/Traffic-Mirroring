@@ -20,6 +20,6 @@ Traffic Mirroring, with detection tools, allows you to quickly detect and respon
     * Filters allow you to mirror only the specific network packets that you want.
     * You can specify protocols, ranges of source and target ports, and CIDR blocks of source and target.
 
-* Service Targets
-    * When you want to capture network traffic and route it to the desired detection tool.
-    * When application traffic mirroring is required for testing and troubleshooting purposes.
+## Service Targets
+* When you want to capture network traffic and route it to the desired detection tool.
+* When application traffic mirroring is required for testing and troubleshooting purposes.
