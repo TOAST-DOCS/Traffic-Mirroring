@@ -8,6 +8,7 @@ You can easily create a mirror session just by entering setting values from the 
 
 #### Mirror Session Information
 Enter basic information on the mirror session. The following items are required. 
+
 * Name: Enter a name for the mirror session. 
 * Description: Describe the mirror session. 
 * Direction: Set the monitoring direction for network packets. You can select one of Outbound and Inbound or both. 
@@ -27,6 +28,7 @@ Enter basic information on the mirror session. The following items are required.
 
 ### About Mirror Session Information
 After creating a mirror session, you return to the Mirror Session List screen. In Mirror Session List, you can find the basic information on the created mirror session. Items that appear on the list screen are as follows.
+
 * Name: Name of the mirror session specified when creating the mirror session. 
 * Description: Description of the mirror session specified when creating the mirror session.
 * Tenant ID: ID of the project that created the mirror session. 
@@ -46,6 +48,7 @@ You can create filter groups and rules to use in mirror sessions.
 
 ### Mirror Filter Group Information
 Enter basic information for the mirror filter group. Required items are as follows. 
+
 * Name: Enter a name for the mirror filter group.
 * Description: Describe the mirror filter group.
 
