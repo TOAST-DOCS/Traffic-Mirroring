@@ -3,6 +3,9 @@
 Network packets in VPC can be captured and routed to detection tools for purposes such as content security, threat analysis, and troubleshooting.
 Traffic Mirroring, with detection tools, allows you to quickly detect and respond to attacks and meet various security compliance requirements.
 
+Traffic Mirroring is only available in new network environments in Korea (Pangyo) region and Korea (Pyeongchon) region.
+For projects created before March 7, 2022 in Korea (Pangyo) region, they are in the old version network environment, so you must create new projects to use Traffic Mirroring.
+
 ## Main Features
 * Mirror Session
     * Mirror source and target source can be linked with each mirror session unit.
