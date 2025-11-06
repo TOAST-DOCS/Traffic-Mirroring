@@ -371,7 +371,7 @@ X-Auth-Token: {tokenId}
 | filtergroup.project\_id | Body | String | 프로젝트 ID |
 | filtergroup.filters | Body | Array | 그룹 내 필터 객체/ID 목록 |
 | filtergroup.created\_at | Body | String | 생성 시간(UTC) |
-| filtergroup.updated\_at | Body | String | 수정 시간 (UTC) |
+| filtergroup.updated\_at | Body | String | 수정 시간(UTC) |
 
 ***
 
