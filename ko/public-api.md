@@ -511,7 +511,7 @@ X-Auth-Token: {tokenId}
 | filters.dst\_port\_range\_max | Body | Number | 대상 포트 범위 끝 |
 | filters.protocol | Body | String | `tcp`, `udp`, `icmp` 또는 null |
 | filters.action | Body | Enum | `accept`, `drop` |
-| filters.priority | Body | Number | 우선순위 (기본 101) |
+| filters.priority | Body | Number | 우선순위(기본 101) |
 | filters.tenant\_id | Body | String | 테넌트 ID |
 | filters.project\_id | Body | String | 프로젝트 ID |
 | filters.created\_at | Body | String | 생성 시간 (UTC) |
