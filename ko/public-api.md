@@ -690,7 +690,7 @@ X-Auth-Token: {tokenId}
 | filter.dst\_port\_range\_max | Body | Number | 대상 포트 범위 끝 |
 | filter.protocol | Body | String | `tcp`, `udp`, `icmp` 또는 null |
 | filter.action | Body | Enum | `accept`, `drop` |
-| filter.priority | Body | Number | 우선순위 (기본 101) |
+| filter.priority | Body | Number | 우선순위(기본 101) |
 | filter.tenant\_id | Body | String | 테넌트 ID |
 | filter.project\_id | Body | String | 프로젝트 ID |
 | filter.created\_at | Body | String | 생성 시간 (UTC) |
