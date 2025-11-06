@@ -693,7 +693,7 @@ X-Auth-Token: {tokenId}
 | filter.priority | Body | Number | 우선순위(기본 101) |
 | filter.tenant\_id | Body | String | 테넌트 ID |
 | filter.project\_id | Body | String | 프로젝트 ID |
-| filter.created\_at | Body | String | 생성 시간 (UTC) |
+| filter.created\_at | Body | String | 생성 시간(UTC) |
 | filter.updated\_at | Body | String | 수정 시간 (UTC) |
 
 ***
