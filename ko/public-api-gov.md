@@ -9,7 +9,7 @@ API를 사용하려면 API 엔드포인트와 토큰 등이 필요합니다. [AP
 
 API 응답에 가이드에 명시되지 않은 필드가 나타날 수 있습니다. 이런 필드는 NHN Cloud 내부 용도로 사용되며 사전 공지 없이 변경될 수 있으므로 사용하지 않습니다.
 
-## 미러링 세션 (session)
+## 미러링 세션(session)
 
 세션은 소스 포트의 트래픽을 타깃 포트로 미러링하는 단위를 의미합니다. 필요한 경우 하나 이상의 필터 그룹을 연결해 세부 트래픽만 미러링할 수 있습니다.
 
@@ -33,7 +33,7 @@ X-Auth-Token: {tokenId}
 | direction | Query | Enum | - | `in`, `out`, `both` 중 하나 |
 | sort\_dir | Query | Enum | - | 정렬 방향. `asc`, `desc` 중 하나 |
 | sort\_key | Query | String | - | 정렬 기준 필드 |
-| fields | Query | String | - | 응답에 포함할 필드. 예) `fields=id&fields=name` |
+| fields | Query | String | - | 응답에 포함할 필드. 예: `fields=id&fields=name` |
 
 #### 응답
 
@@ -53,8 +53,8 @@ X-Auth-Token: {tokenId}
 | sessions.source\_network\_id | Body | UUID | 소스 포트의 네트워크 ID |
 | sessions.vni | Body | Number | 미러링 터널 VNI |
 | sessions.status | Body | Enum | 세션 상태: `ACTIVE`, `BUILD`, `ERROR` |
-| sessions.created\_at | Body | String | 생성 시간 (UTC) |
-| sessions.updated\_at | Body | String | 수정 시간 (UTC) |
+| sessions.created\_at | Body | String | 생성 시간(UTC) |
+| sessions.updated\_at | Body | String | 수정 시간(UTC) |
 
 예시
 
@@ -99,7 +99,7 @@ X-Auth-Token: {tokenId}
 | --- | --- | --- | --- | --- |
 | SessionId | URL | UUID | O | 세션 ID |
 | tokenId | Header | String | O | 토큰 ID |
-| fields | Query | String | - | 응답에 포함할 필드. 예) `fields=id&fields=name` |
+| fields | Query | String | - | 응답에 포함할 필드. 예: `fields=id&fields=name` |
 
 #### 응답
 
@@ -119,8 +119,8 @@ X-Auth-Token: {tokenId}
 | session.source\_network\_id | Body | UUID | 소스 포트의 네트워크 ID |
 | session.vni | Body | Number | 터널 VNI |
 | session.status | Body | Enum | `ACTIVE`, `BUILD`, `ERROR` |
-| session.created\_at | Body | String | 생성 시간 (UTC) |
-| session.updated\_at | Body | String | 수정 시간 (UTC) |
+| session.created\_at | Body | String | 생성 시간(UTC) |
+| session.updated\_at | Body | String | 수정 시간(UTC) |
 
 예시
 
@@ -161,8 +161,8 @@ X-Auth-Token: {tokenId}
 | --- | --- | --- | --- | --- |
 | tokenId | Header | String | O | 토큰 ID |
 | session | Body | Object | O | 세션 생성 요청 객체 |
-| session.name | Body | String | - | 세션 이름 (최대 32자, 영문/숫자/`-`/`_`) |
-| session.description | Body | String | - | 설명 (최대 255자) |
+| session.name | Body | String | - | 세션 이름(최대 32자, 영문/숫자/`-`/`_`) |
+| session.description | Body | String | - | 설명(최대 255자) |
 | session.target\_port\_id | Body | UUID | O | 타깃 포트 ID |
 | session.source\_port\_id | Body | UUID | O | 소스 포트 ID |
 | session.filter\_groups | Body | Array[UUID] | - | 연결할 필터 그룹 ID 목록. 없으면 전체 트래픽 미러링 |
@@ -284,7 +284,7 @@ X-Auth-Token: {tokenId}
 
 ***
 
-## 미러링 필터 그룹 (filtergroup)
+## 미러링 필터 그룹(filtergroup)
 
 필터 그룹은 하나 이상의 필터를 묶는 컨테이너입니다. 세션에 연결하여 특정 트래픽만 미러링할 수 있습니다.
 
@@ -320,8 +320,8 @@ X-Auth-Token: {tokenId}
 | filtergroups.tenant\_id | Body | String | 테넌트 ID |
 | filtergroups.project\_id | Body | String | 프로젝트 ID |
 | filtergroups.filters | Body | Array | 그룹 내 필터 객체/ID 목록 |
-| filtergroups.created\_at | Body | String | 생성 시간 (UTC) |
-| filtergroups.updated\_at | Body | String | 수정 시간 (UTC) |
+| filtergroups.created\_at | Body | String | 생성 시간(UTC) |
+| filtergroups.updated\_at | Body | String | 수정 시간(UTC) |
 
 예시
 
@@ -371,8 +371,8 @@ X-Auth-Token: {tokenId}
 | filtergroup.tenant\_id | Body | String | 테넌트 ID |
 | filtergroup.project\_id | Body | String | 프로젝트 ID |
 | filtergroup.filters | Body | Array | 그룹 내 필터 객체/ID 목록 |
-| filtergroup.created\_at | Body | String | 생성 시간 (UTC) |
-| filtergroup.updated\_at | Body | String | 수정 시간 (UTC) |
+| filtergroup.created\_at | Body | String | 생성 시간(UTC) |
+| filtergroup.updated\_at | Body | String | 수정 시간(UTC) |
 
 ***
 
@@ -389,8 +389,8 @@ X-Auth-Token: {tokenId}
 | --- | --- | --- | --- | --- |
 | tokenId | Header | String | O | 토큰 ID |
 | filtergroup | Body | Object | O | 필터 그룹 생성 요청 객체 |
-| filtergroup.name | Body | String | - | 이름 (최대 32자, 영문/숫자/`-`/`_`) |
-| filtergroup.description | Body | String | - | 설명 (최대 255자) |
+| filtergroup.name | Body | String | - | 이름(최대 32자, 영문/숫자/`-`/`_`) |
+| filtergroup.description | Body | String | - | 설명(최대 255자) |
 | filtergroup.tenant\_id | Body | String | O | 테넌트 ID |
 | filtergroup.project\_id | Body | String | O | 프로젝트 ID |
 
@@ -418,8 +418,8 @@ X-Auth-Token: {tokenId}
 | filtergroup.tenant\_id | Body | String | 테넌트 ID |
 | filtergroup.project\_id | Body | String | 프로젝트 ID |
 | filtergroup.filters | Body | Array | 그룹 내 필터 객체/ID 목록 |
-| filtergroup.created\_at | Body | String | 생성 시간 (UTC) |
-| filtergroup.updated\_at | Body | String | 수정 시간 (UTC) |
+| filtergroup.created\_at | Body | String | 생성 시간(UTC) |
+| filtergroup.updated\_at | Body | String | 수정 시간(UTC) |
 
 ***
 
@@ -453,8 +453,8 @@ X-Auth-Token: {tokenId}
 | filtergroup.tenant\_id | Body | String | 테넌트 ID |
 | filtergroup.project\_id | Body | String | 프로젝트 ID |
 | filtergroup.filters | Body | Array | 그룹 내 필터 객체/ID 목록 |
-| filtergroup.created\_at | Body | String | 생성 시간 (UTC) |
-| filtergroup.updated\_at | Body | String | 수정 시간 (UTC) |
+| filtergroup.created\_at | Body | String | 생성 시간(UTC) |
+| filtergroup.updated\_at | Body | String | 수정 시간(UTC) |
 
 ***
 
@@ -471,7 +471,7 @@ X-Auth-Token: {tokenId}
 
 ***
 
-## 미러링 필터 (filter)
+## 미러링 필터(filter)
 
 필터는 매칭 조건과 액션으로 구성되며, 특정 트래픽을 허용(`accept`) 또는 제외(`drop`)하는 용도로 사용됩니다. 필터는 반드시 특정 필터 그룹에 속해야 합니다.
 
@@ -512,11 +512,11 @@ X-Auth-Token: {tokenId}
 | filters.dst\_port\_range\_max | Body | Number | 대상 포트 범위 끝 |
 | filters.protocol | Body | String | `tcp`, `udp`, `icmp` 또는 null |
 | filters.action | Body | Enum | `accept`, `drop` |
-| filters.priority | Body | Number | 우선순위 (기본 101) |
+| filters.priority | Body | Number | 우선순위(기본 101) |
 | filters.tenant\_id | Body | String | 테넌트 ID |
 | filters.project\_id | Body | String | 프로젝트 ID |
-| filters.created\_at | Body | String | 생성 시간 (UTC) |
-| filters.updated\_at | Body | String | 수정 시간 (UTC) |
+| filters.created\_at | Body | String | 생성 시간(UTC) |
+| filters.updated\_at | Body | String | 수정 시간(UTC) |
 
 예시
 
@@ -579,11 +579,11 @@ X-Auth-Token: {tokenId}
 | filter.dst\_port\_range\_max | Body | Number | 대상 포트 범위 끝 |
 | filter.protocol | Body | String | `tcp`, `udp`, `icmp` 또는 null |
 | filter.action | Body | Enum | `accept`, `drop` |
-| filter.priority | Body | Number | 우선순위 (기본 101) |
+| filter.priority | Body | Number | 우선순위(기본 101) |
 | filter.tenant\_id | Body | String | 테넌트 ID |
 | filter.project\_id | Body | String | 프로젝트 ID |
-| filter.created\_at | Body | String | 생성 시간 (UTC) |
-| filter.updated\_at | Body | String | 수정 시간 (UTC) |
+| filter.created\_at | Body | String | 생성 시간(UTC) |
+| filter.updated\_at | Body | String | 수정 시간(UTC) |
 
 ***
 
@@ -600,7 +600,7 @@ X-Auth-Token: {tokenId}
 | --- | --- | --- | --- | --- |
 | tokenId | Header | String | O | 토큰 ID |
 | filter | Body | Object | O | 필터 생성 요청 객체 |
-| filter.description | Body | String | - | 설명 (최대 255자) |
+| filter.description | Body | String | - | 설명(최대 255자) |
 | filter.filter\_group\_id | Body | UUID | O | 소속 필터 그룹 ID |
 | filter.src\_cidr | Body | CIDR | - | 소스 CIDR |
 | filter.dst\_cidr | Body | CIDR | - | 대상 CIDR |
@@ -649,11 +649,11 @@ X-Auth-Token: {tokenId}
 | filter.dst\_port\_range\_max | Body | Number | 대상 포트 범위 끝 |
 | filter.protocol | Body | String | `tcp`, `udp`, `icmp` 또는 null |
 | filter.action | Body | Enum | `accept`, `drop` |
-| filter.priority | Body | Number | 우선순위 (기본 101) |
+| filter.priority | Body | Number | 우선순위(기본 101) |
 | filter.tenant\_id | Body | String | 테넌트 ID |
 | filter.project\_id | Body | String | 프로젝트 ID |
-| filter.created\_at | Body | String | 생성 시간 (UTC) |
-| filter.updated\_at | Body | String | 수정 시간 (UTC) |
+| filter.created\_at | Body | String | 생성 시간(UTC) |
+| filter.updated\_at | Body | String | 수정 시간(UTC) |
 
 ***
 
@@ -691,11 +691,11 @@ X-Auth-Token: {tokenId}
 | filter.dst\_port\_range\_max | Body | Number | 대상 포트 범위 끝 |
 | filter.protocol | Body | String | `tcp`, `udp`, `icmp` 또는 null |
 | filter.action | Body | Enum | `accept`, `drop` |
-| filter.priority | Body | Number | 우선순위 (기본 101) |
+| filter.priority | Body | Number | 우선순위(기본 101) |
 | filter.tenant\_id | Body | String | 테넌트 ID |
 | filter.project\_id | Body | String | 프로젝트 ID |
-| filter.created\_at | Body | String | 생성 시간 (UTC) |
-| filter.updated\_at | Body | String | 수정 시간 (UTC) |
+| filter.created\_at | Body | String | 생성 시간(UTC) |
+| filter.updated\_at | Body | String | 수정 시간(UTC) |
 
 ***
 
