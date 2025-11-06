@@ -514,7 +514,7 @@ X-Auth-Token: {tokenId}
 | filters.priority | Body | Number | 우선순위(기본 101) |
 | filters.tenant\_id | Body | String | 테넌트 ID |
 | filters.project\_id | Body | String | 프로젝트 ID |
-| filters.created\_at | Body | String | 생성 시간 (UTC) |
+| filters.created\_at | Body | String | 생성 시간(UTC) |
 | filters.updated\_at | Body | String | 수정 시간 (UTC) |
 
 예시
