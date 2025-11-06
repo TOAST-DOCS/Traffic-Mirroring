@@ -118,7 +118,7 @@ X-Auth-Token: {tokenId}
 | session.source\_network\_id | Body | UUID | 소스 포트의 네트워크 ID |
 | session.vni | Body | Number | 터널 VNI |
 | session.status | Body | Enum | `ACTIVE`, `BUILD`, `ERROR` |
-| session.created\_at | Body | String | 생성 시간 (UTC) |
+| session.created\_at | Body | String | 생성 시간(UTC) |
 | session.updated\_at | Body | String | 수정 시간 (UTC) |
 
 예시
