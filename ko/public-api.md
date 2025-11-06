@@ -160,7 +160,7 @@ X-Auth-Token: {tokenId}
 | --- | --- | --- | --- | --- |
 | tokenId | Header | String | O | 토큰 ID |
 | session | Body | Object | O | 세션 생성 요청 객체 |
-| session.name | Body | String | - | 세션 이름 (최대 32자, 영문/숫자/`-`/`_`) |
+| session.name | Body | String | - | 세션 이름(최대 32자, 영문/숫자/`-`/`_`) |
 | session.description | Body | String | - | 설명 (최대 255자) |
 | session.target\_port\_id | Body | UUID | O | 타깃 포트 ID |
 | session.source\_port\_id | Body | UUID | O | 소스 포트 ID |
