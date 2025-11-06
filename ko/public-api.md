@@ -32,7 +32,7 @@ X-Auth-Token: {tokenId}
 | direction | Query | Enum | - | `in`, `out`, `both` 중 하나 |
 | sort\_dir | Query | Enum | - | 정렬 방향. `asc`, `desc` 중 하나 |
 | sort\_key | Query | String | - | 정렬 기준 필드 |
-| fields | Query | String | - | 응답에 포함할 필드. 예) `fields=id&fields=name` |
+| fields | Query | String | - | 응답에 포함할 필드. 예: `fields=id&fields=name` |
 
 #### 응답
 
