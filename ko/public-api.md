@@ -599,7 +599,7 @@ X-Auth-Token: {tokenId}
 | --- | --- | --- | --- | --- |
 | tokenId | Header | String | O | 토큰 ID |
 | filter | Body | Object | O | 필터 생성 요청 객체 |
-| filter.description | Body | String | - | 설명 (최대 255자) |
+| filter.description | Body | String | - | 설명(최대 255자) |
 | filter.filter\_group\_id | Body | UUID | O | 소속 필터 그룹 ID |
 | filter.src\_cidr | Body | CIDR | - | 소스 CIDR |
 | filter.dst\_cidr | Body | CIDR | - | 대상 CIDR |
