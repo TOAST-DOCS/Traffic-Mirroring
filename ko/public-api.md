@@ -52,7 +52,7 @@ X-Auth-Token: {tokenId}
 | sessions.source\_network\_id | Body | UUID | 소스 포트의 네트워크 ID |
 | sessions.vni | Body | Number | 미러링 터널 VNI |
 | sessions.status | Body | Enum | 세션 상태: `ACTIVE`, `BUILD`, `ERROR` |
-| sessions.created\_at | Body | String | 생성 시간 (UTC) |
+| sessions.created\_at | Body | String | 생성 시간(UTC) |
 | sessions.updated\_at | Body | String | 수정 시간 (UTC) |
 
 예시
