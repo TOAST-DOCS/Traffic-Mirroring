@@ -319,7 +319,7 @@ X-Auth-Token: {tokenId}
 | filtergroups.tenant\_id | Body | String | 테넌트 ID |
 | filtergroups.project\_id | Body | String | 프로젝트 ID |
 | filtergroups.filters | Body | Array | 그룹 내 필터 객체/ID 목록 |
-| filtergroups.created\_at | Body | String | 생성 시간 (UTC) |
+| filtergroups.created\_at | Body | String | 생성 시간(UTC) |
 | filtergroups.updated\_at | Body | String | 수정 시간 (UTC) |
 
 예시
