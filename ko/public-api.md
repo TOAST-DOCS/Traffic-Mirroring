@@ -388,7 +388,7 @@ X-Auth-Token: {tokenId}
 | --- | --- | --- | --- | --- |
 | tokenId | Header | String | O | 토큰 ID |
 | filtergroup | Body | Object | O | 필터 그룹 생성 요청 객체 |
-| filtergroup.name | Body | String | - | 이름 (최대 32자, 영문/숫자/`-`/`_`) |
+| filtergroup.name | Body | String | - | 이름(최대 32자, 영문/숫자/`-`/`_`) |
 | filtergroup.description | Body | String | - | 설명 (최대 255자) |
 | filtergroup.tenant\_id | Body | String | O | 테넌트 ID |
 | filtergroup.project\_id | Body | String | O | 프로젝트 ID |
