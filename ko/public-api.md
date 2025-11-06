@@ -98,7 +98,7 @@ X-Auth-Token: {tokenId}
 | --- | --- | --- | --- | --- |
 | SessionId | URL | UUID | O | 세션 ID |
 | tokenId | Header | String | O | 토큰 ID |
-| fields | Query | String | - | 응답에 포함할 필드. 예) `fields=id&fields=name` |
+| fields | Query | String | - | 응답에 포함할 필드. 예: `fields=id&fields=name` |
 
 #### 응답
 
