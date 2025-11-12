@@ -1,6 +1,6 @@
 ## Network > Mirroring > API v2 Guide
 
-API endpoint and token are required to use the API. Prepare the information required to use the API by referring to [Prepare to Use API](/Compute/Compute/ko/identity-api/). The Mirroring API uses a `network` type endpoint. For the exact endpoint, refer to `serviceCatalog` in the token issuance response.
+API endpoint and token are required to use the API. Prepare the information required to use the API by referring to [Prepare to Use API](/Compute/Compute/en/identity-api/). The Mirroring API uses a `network` type endpoint. For the exact endpoint, refer to `serviceCatalog` in the token issuance response.
 
 | Type | Region | Endpoint |
 | --- | --- | ----- |
