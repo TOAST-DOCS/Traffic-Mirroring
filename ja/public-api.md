@@ -1,6 +1,6 @@
 ## Network > Mirroring > API v2ガイド
 
-APIを使用するには、APIエンドポイントやトークンなどが必要です。[API利用準備](/Compute/Compute/ko/identity-api/)を参照し、APIの使用に必要な情報を準備してください。ミラーリングAPIは`network`タイプのエンドポイントを利用します。正確なエンドポイントは、トークン発行時のレスポンスにある`serviceCatalog`を参照してください。
+APIを使用するには、APIエンドポイントやトークンなどが必要です。[API利用準備](/Compute/Compute/ja/identity-api/)を参照し、APIの使用に必要な情報を準備してください。ミラーリングAPIは`network`タイプのエンドポイントを利用します。正確なエンドポイントは、トークン発行時のレスポンスにある`serviceCatalog`を参照してください。
 
 | タイプ | リージョン | エンドポイント |
 | --- | --- | ----- |
