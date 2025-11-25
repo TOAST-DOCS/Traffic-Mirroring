@@ -233,7 +233,7 @@ You can modify description, name, direction, and filter group list only. Changin
 #### Request
 
 | Name | Type | Format | Required | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | SessionId | URL | UUID | O | Session ID |
 | tokenId | Header | String | O | Token ID |
 | session | Body | Object | O | Include only the fields to be modified |
