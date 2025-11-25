@@ -233,7 +233,7 @@ You can modify description, name, direction, and filter group list only. Changin
 #### Request
 
 | Name | Type | Format | Required | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | SessionId | URL | UUID | O | Session ID |
 | tokenId | Header | String | O | Token ID |
 | session | Body | Object | O | Include only the fields to be modified |
@@ -299,7 +299,7 @@ X-Auth-Token: {tokenId}
 This API does not require a request body.
 
 | Name | Type | Format | Required | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | tokenId | Header | String | O | Token ID |
 | id | Query | UUID | - | Filter Group ID |
 | tenant\_id | Query | String | - | Tenant ID |
@@ -355,7 +355,7 @@ X-Auth-Token: {tokenId}
 This API does not require a request body.
 
 | Name | Type | Format | Required | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | tokenId | Header | String | Yes | Token ID |
 | id | URL | UUID | Yes | Filter Group ID |
 
@@ -385,7 +385,7 @@ X-Auth-Token: {tokenId}
 #### Request
 
 | Name | Type | Format | Required | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | tokenId | Header | String | O | Token ID |
 | filtergroup | Body | Object | O | Filter group creation request object |
 | filtergroup.name | Body | String | - | Name (up to 32 characters, English letters/numbers/`-`/`_`) |
@@ -434,7 +434,7 @@ Name and description only can be modified.
 #### Request
 
 | Name | Type | Format | Required | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | FilterGroupId | URL | UUID | Yes | Filter Group ID |
 | tokenId | Header | String | Yes | Token ID |
 | filtergroup | Body | Object | Yes | Include only fields to modify |
@@ -558,7 +558,7 @@ X-Auth-Token: {tokenId}
 This API does not require a request body.
 
 | Name | Type | Format | Required | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | tokenId | Header | String | Yes | Token ID |
 | id | Query | URL | Yes | Filter ID |
 
