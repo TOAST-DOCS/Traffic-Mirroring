@@ -4,7 +4,7 @@ API endpoint and token are required to use the API. Prepare the information requ
 
 | Type | Region | Endpoint |
 | --- | --- | ----- |
-| network | Korea (Pangyo) Region <br>Korea (Pyeongchon) Region | https://kr1-api-network-infrastructure.nhncloudservice.com<br>https://kr2-api-network-infrastructure.nhncloudservice.com |
+| network | Korea (Pangyo) Region <br>Korea (Pyeongchon) Region <br>Korea (Gwangju) Region | https://kr1-api-network-infrastructure.nhncloudservice.com<br>https://kr2-api-network-infrastructure.nhncloudservice.com<br>https://kr3-api-network-infrastructure.nhncloudservice.com |
 
 API responses may contain fields not specified in the guide. The fields are used internally by NHN Cloud and are subject to change without notice, so they are not used.
 
