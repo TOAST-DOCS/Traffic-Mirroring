@@ -4,7 +4,7 @@ APIを使用するには、APIエンドポイントやトークンなどが必�
 
 | タイプ | リージョン | エンドポイント |
 | --- | --- | ----- |
-| network | 韓国(パンギョ)リージョン<br>韓国(ピョンチョン)リージョン | https://kr1-api-network-infrastructure.nhncloudservice.com<br>https://kr2-api-network-infrastructure.nhncloudservice.com |
+| network | 韓国(パンギョ)リージョン<br>韓国(ピョンチョン)リージョン<br>韓国(光州)リージョン | https://kr1-api-network-infrastructure.nhncloudservice.com<br>https://kr2-api-network-infrastructure.nhncloudservice.com<br>https://kr3-api-network-infrastructure.nhncloudservice.com |
 
 APIのレスポンスには、ガイドに明記されていないフィールドが含まれる場合があります。これらのフィールドはNHN Cloudの内部用として使用され、事前の通知なしに変更されることがあるため、使用しないでください。
 
