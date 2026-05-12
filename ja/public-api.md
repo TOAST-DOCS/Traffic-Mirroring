@@ -1,6 +1,8 @@
-## Network > Mirroring > API v2ガイド
+## Network > Traffic Mirroring > API v2ガイド
 
-APIを使用するには、APIエンドポイントやトークンなどが必要です。[API利用準備](/Compute/Compute/ja/identity-api/)を参照し、APIの使用に必要な情報を準備してください。ミラーリングAPIは`network`タイプのエンドポイントを利用します。正確なエンドポイントは、トークン発行時のレスポンスにある`serviceCatalog`を参照してください。
+NHN Cloud Networkサービスは、API呼び出し時の認証/認可のためにIaaSトークンを使用します。IaaSトークンは、NHN CloudのOpenStackベースのインフラサービス(IaaS)で使用する認証トークンです。IaaSトークンの発行及び使用に関する詳細は、[IaaSトークン](/nhncloud/ja/public-api/iaas-token)を参照してください。
+
+ミラーリングAPIは`network`タイプのエンドポイントを利用します。正確なエンドポイントは、トークン発行時のレスポンスにある`serviceCatalog`を参照してください。
 
 | タイプ | リージョン | エンドポイント |
 | --- | --- | ----- |

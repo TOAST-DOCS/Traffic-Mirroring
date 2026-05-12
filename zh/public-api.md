@@ -1,6 +1,8 @@
-## Network > Mirroring > API v2 Guide
+## Network > Traffic Mirroring > API v2 Guide
 
-API endpoint and token are required to use the API. Prepare the information required to use the API by referring to [Prepare to Use API](/Compute/Compute/ko/identity-api/). The Mirroring API uses a `network` type endpoint. For the exact endpoint, refer to `serviceCatalog` in the token issuance response.
+NHN Cloud Network services use IaaS tokens for authentication and authorization when making API calls. The IaaS token is an authentication token used for NHN Cloud's OpenStack-based infrastructure services (IaaS). For more information on issuing and using IaaS tokens, please refer to the IaaS Token.
+
+The Mirroring API uses a `network` type endpoint. For the exact endpoint, refer to `serviceCatalog` in the token issuance response.
 
 | Type | Region | Endpoint |
 | --- | --- | ----- |
