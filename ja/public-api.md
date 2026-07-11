@@ -1,4 +1,7 @@
-## Network > Traffic Mirroring > API v2ガイド
+<!-- pre-align:aligned sig=1b4ae289ae2b -->
+
+<a id="network-traffic-mirroring-api-v2-guide"></a>
+## Network > Traffic Mirroring > API v2ガイド { #network-traffic-mirroring-api-v2-guide }
 
 NHN Cloud Networkサービスは、API呼び出し時の認証/認可のためにIaaSトークンを使用します。IaaSトークンは、NHN CloudのOpenStackベースのインフラサービス(IaaS)で使用する認証トークンです。IaaSトークンの発行及び使用に関する詳細は、[IaaSトークン](/nhncloud/ja/public-api/iaas-token)を参照してください。
 
@@ -10,17 +13,20 @@ NHN Cloud Networkサービスは、API呼び出し時の認証/認可のため�
 
 APIのレスポンスには、ガイドに明記されていないフィールドが含まれる場合があります。これらのフィールドはNHN Cloudの内部用として使用され、事前の通知なしに変更されることがあるため、使用しないでください。
 
-## ミラーリングセッション(session)
+<a id="mirroring-session-session"></a>
+## ミラーリングセッション(session) { #mirroring-session-session }
 
 セッションは、ソースポートのトラフィックをターゲットポートにミラーリングする単位を意味します。必要な場合、1つ以上のフィルタグループを関連付け、特定のトラフィックのみをミラーリングできます。
 
-### セッション一覧の表示
+<a id="view-session-lists"></a>
+### セッション一覧の表示 { #view-session-lists }
 
 ```
 GET /v2.0/mirroring/sessions
 X-Auth-Token: {tokenId}
 ```
 
+<a id="view-session-lists-request"></a>
 #### リクエスト
 
 このAPIはリクエストボディを要求しません。
@@ -36,6 +42,7 @@ X-Auth-Token: {tokenId}
 | sort\_key | Query | String | - | ソート基準フィールド |
 | fields | Query | String | - | レスポンスに含めるフィールド。例: `fields=id&fields=name` |
 
+<a id="view-session-lists-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -85,13 +92,15 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### セッションの表示
+<a id="view-sessions"></a>
+### セッションの表示 { #view-sessions }
 
 ```
 GET /v2.0/mirroring/sessions/{SessionId}
 X-Auth-Token: {tokenId}
 ```
 
+<a id="view-sessions-request"></a>
 #### リクエスト
 
 このAPIはリクエストボディを要求しません。
@@ -102,6 +111,7 @@ X-Auth-Token: {tokenId}
 | tokenId | Header | String | O | トークンID |
 | fields | Query | String | - | レスポンスに含めるフィールド。例: `fields=id&fields=name` |
 
+<a id="view-sessions-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -149,13 +159,15 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### セッションの作成
+<a id="create-sessions"></a>
+### セッションの作成 { #create-sessions }
 
 ```
 POST /v2.0/mirroring/sessions
 X-Auth-Token: {tokenId}
 ```
 
+<a id="create-sessions-request"></a>
 #### リクエスト
 
 | 名前 | 種類 | 形式 | 必須 | 説明 |
@@ -188,6 +200,7 @@ X-Auth-Token: {tokenId}
 }
 ```
 
+<a id="create-sessions-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -223,7 +236,8 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### セッションの修正
+<a id="modify-sessions"></a>
+### セッションの修正 { #modify-sessions }
 
 ```
 PUT /v2.0/mirroring/sessions/{SessionId}
@@ -232,6 +246,7 @@ X-Auth-Token: {tokenId}
 
 説明と名前、方向、フィルタグループ一覧のみ修正できます。ポートの変更はサポートしていません。
 
+<a id="modify-sessions-request"></a>
 #### リクエスト
 
 | 名前 | 種類 | 形式 | 必須 | 説明 |
@@ -257,19 +272,22 @@ X-Auth-Token: {tokenId}
 }
 ```
 
+<a id="modify-sessions-response"></a>
 #### レスポンス
 
 セッションの表示の応答と同じです。
 
 ***
 
-### セッションの削除
+<a id="delete-sessions"></a>
+### セッションの削除 { #delete-sessions }
 
 ```
 DELETE /v2.0/mirroring/sessions/{SessionId}
 X-Auth-Token: {tokenId}
 ```
 
+<a id="delete-sessions-request"></a>
 #### リクエスト
 
 このAPIはリクエストボディを要求しません。
@@ -279,23 +297,27 @@ X-Auth-Token: {tokenId}
 | SessionId | URL | UUID | O | セッションID |
 | tokenId | Header | String | O | トークンID |
 
+<a id="delete-sessions-response"></a>
 #### レスポンス
 
 このAPIはレスポンスボディを返しません。
 
 ***
 
-## ミラーリングフィルタグループ(filtergroup)
+<a id="mirroring-filter-group-filtergroup"></a>
+## ミラーリングフィルタグループ(filtergroup) { #mirroring-filter-group-filtergroup }
 
 フィルタグループは、1つ以上のフィルタをまとめるコンテナです。セッションに関連付け、特定のトラフィックのみをミラーリングできます。
 
-### フィルタグループ一覧の表示
+<a id="view-a-list-of-filter-groups"></a>
+### フィルタグループ一覧の表示 { #view-a-list-of-filter-groups }
 
 ```
 GET /v2.0/mirroring/filtergroups
 X-Auth-Token: {tokenId}
 ```
 
+<a id="view-a-list-of-filter-groups-request"></a>
 #### リクエスト
 
 このAPIはリクエストボディを要求しません。
@@ -310,6 +332,7 @@ X-Auth-Token: {tokenId}
 | sort\_key | Query | String | - | ソートキー |
 | fields | Query | String | - | 含めるフィールド |
 
+<a id="view-a-list-of-filter-groups-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -345,13 +368,15 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### フィルタグループの表示
+<a id="view-filter-groups"></a>
+### フィルタグループの表示 { #view-filter-groups }
 
 ```
 GET /v2.0/mirroring/filtergroups/{FilterGroupId}
 X-Auth-Token: {tokenId}
 ```
 
+<a id="view-filter-groups-request"></a>
 #### リクエスト
 
 このAPIはリクエストボディを要求しません。
@@ -361,6 +386,7 @@ X-Auth-Token: {tokenId}
 | tokenId | Header | String | O | トークンID |
 | id | URL | UUID | O | フィルタグループID |
 
+<a id="view-filter-groups-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -377,13 +403,15 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### フィルタグループの作成
+<a id="create-filter-groups"></a>
+### フィルタグループの作成 { #create-filter-groups }
 
 ```
 POST /v2.0/mirroring/filtergroups
 X-Auth-Token: {tokenId}
 ```
 
+<a id="create-filter-groups-request"></a>
 #### リクエスト
 
 | 名前 | 種類 | 形式 | 必須 | 説明 |
@@ -408,6 +436,7 @@ X-Auth-Token: {tokenId}
 }
 ```
 
+<a id="create-filter-groups-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -424,7 +453,8 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### フィルタグループの修正
+<a id="modify-filter-groups"></a>
+### フィルタグループの修正 { #modify-filter-groups }
 
 ```
 PUT /v2.0/mirroring/filtergroups/{FilterGroupId}
@@ -433,6 +463,7 @@ X-Auth-Token: {tokenId}
 
 名前と説明のみ修正できます。
 
+<a id="modify-filter-groups-request"></a>
 #### リクエスト
 
 | 名前 | 種類 | 形式 | 必須 | 説明 |
@@ -443,6 +474,7 @@ X-Auth-Token: {tokenId}
 | filtergroup.name | Body | String | - | 名前 |
 | filtergroup.description | Body | String | - | 説明 |
 
+<a id="modify-filter-groups-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -459,30 +491,35 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### フィルタグループの削除
+<a id="delete-filter-groups"></a>
+### フィルタグループの削除 { #delete-filter-groups }
 
 ```
 DELETE /v2.0/mirroring/filtergroups/{FilterGroupId}
 X-Auth-Token: {tokenId}
 ```
 
+<a id="delete-filter-groups-requestresponse"></a>
 #### リクエスト/レスポンス
 
 リクエストボディなし。レスポンスボディなし。
 
 ***
 
-## ミラーリングフィルタ(filter)
+<a id="mirroring-filter-filter"></a>
+## ミラーリングフィルタ(filter) { #mirroring-filter-filter }
 
 フィルタは、マッチング条件とアクションで構成され、特定のトラフィックを許可(`accept`)または除外(`drop`)する目的で使用されます。フィルタは、必ず特定のフィルタグループに属している必要があります。
 
-### フィルタ一覧の表示
+<a id="view-filter-lists"></a>
+### フィルタ一覧の表示 { #view-filter-lists }
 
 ```
 GET /v2.0/mirroring/filters
 X-Auth-Token: {tokenId}
 ```
 
+<a id="view-filter-lists-request"></a>
 #### リクエスト
 
 このAPIはリクエストボディを要求しません。
@@ -497,6 +534,7 @@ X-Auth-Token: {tokenId}
 | sort\_key | Query | String | - | ソートキー |
 | fields | Query | String | - | 含めるフィールド |
 
+<a id="view-filter-lists-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -548,13 +586,15 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### フィルタの表示
+<a id="view-filters"></a>
+### フィルタの表示 { #view-filters }
 
 ```
 GET /v2.0/mirroring/filters/{FilterId}
 X-Auth-Token: {tokenId}
 ```
 
+<a id="view-filters-request"></a>
 #### リクエスト
 
 このAPIはリクエストボディを要求しません。
@@ -564,6 +604,7 @@ X-Auth-Token: {tokenId}
 | tokenId | Header | String | O | トークンID |
 | id | Query | URL | O | フィルタID |
 
+<a id="view-filters-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -588,13 +629,15 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### フィルタの作成
+<a id="create-filters"></a>
+### フィルタの作成 { #create-filters }
 
 ```
 POST /v2.0/mirroring/filters
 X-Auth-Token: {tokenId}
 ```
 
+<a id="create-filters-request"></a>
 #### リクエスト
 
 | 名前 | 種類 | 形式 | 必須 | 説明 |
@@ -634,6 +677,7 @@ X-Auth-Token: {tokenId}
 }
 ```
 
+<a id="create-filters-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -658,7 +702,8 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### フィルタの修正
+<a id="modify-filters"></a>
+### フィルタの修正 { #modify-filters }
 
 ```
 PUT /v2.0/mirroring/filters/{FilterId}
@@ -667,6 +712,7 @@ X-Auth-Token: {tokenId}
 
 説明のみ修正できます。マッチング条件、アクション、優先順位、所属グループは修正できません。
 
+<a id="modify-filters-request"></a>
 #### リクエスト
 
 | 名前 | 種類 | 形式 | 必須 | 説明 |
@@ -676,6 +722,7 @@ X-Auth-Token: {tokenId}
 | filter | Body | Object | O | 修正するフィールドのみ含む |
 | filter.description | Body | String | - | 説明 |
 
+<a id="modify-filters-response"></a>
 #### レスポンス
 
 | 名前 | 種類 | 形式 | 説明 |
@@ -700,13 +747,15 @@ X-Auth-Token: {tokenId}
 
 ***
 
-### フィルタの削除
+<a id="delete-filters"></a>
+### フィルタの削除 { #delete-filters }
 
 ```
 DELETE /v2.0/mirroring/filters/{FilterId}
 X-Auth-Token: {tokenId}
 ```
 
+<a id="delete-filters-requestresponse"></a>
 #### リクエスト/レスポンス
 
 リクエストボディなし。レスポンスボディなし。
